@@ -34,7 +34,7 @@ function createApolloClient() {
 }
 
 // Inititalise apollo client with context and initial state
-export function inititalizeApollo(initialState: any = null) {
+export function initializeApollo(initialState: any = null) {
   const _apolloClient = apolloClient ?? createApolloClient()
 
   // Initial apollo client state gets re-hydrated
@@ -51,6 +51,6 @@ export function inititalizeApollo(initialState: any = null) {
 }
 
 export function useApollo(initialState: any) {
-  const store = useMemo(() => inititalizeApollo(initialState), [initialState])
+  const store = useMemo(() => initializeApollo(initialState), [initialState])
   return store
 }
